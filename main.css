@@ -1,0 +1,109 @@
+@import url("https://fonts.googleapis.com/css2?family=Bodoni+Moda:wght@400;500;600;700;900&family=Poppins:wght@400;700&family=Roboto:wght@400;700&display=swap");
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Bodoni Moda", Serif, monospace;
+  font-size: 1.2rem;
+  background: linear-gradient(to right, #041308, #0b3317);
+}
+
+.container {
+  color: white;
+  min-height: 100vh;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 50px;
+  gap: 20px;
+}
+.container .left-col {
+  width: 35%;
+  text-align: center;
+}
+.container .right-col {
+  width: 50%;
+  display: grid;
+  gap: 10px;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-auto-rows: 140px;
+}
+.container .right-col .box {
+  border-radius: 0.5rem;
+  background-size: cover;
+  background-position: top;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #222;
+  background-blend-mode: hard-light;
+}
+.container .right-col .box:hover {
+  background-color: #999;
+  background-position: center;
+  transition: all 0.7s ease-in-out;
+  font-weight: bold;
+  font-size: 1.5rem;
+  box-shadow: 0 0 16px #fff;
+}
+
+.col-2 {
+  grid-column: span 2;
+}
+
+.row-2 {
+  grid-row: span 2;
+}
+
+@media screen and (max-width: 1024px) {
+  .container {
+    flex-direction: column;
+    gap: 75px;
+  }
+  .container .left-col {
+    width: 100%;
+    padding: 0 75px;
+  }
+  .container .right-col {
+    width: 100%;
+    padding: 0 75px;
+    grid-auto-rows: 160px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    gap: 75px;
+  }
+  .container .left-col {
+    width: 100%;
+    padding: 0 35px;
+  }
+  .container .right-col {
+    width: 100%;
+    padding: 0 35px;
+  }
+}
+@media screen and (max-width: 640px) {
+  .container {
+    padding: 55px;
+    flex-direction: column;
+    gap: 75px;
+  }
+  .container .left-col {
+    width: 100%;
+    padding: 0px;
+  }
+  .container .right-col {
+    width: 100%;
+    padding: 0px;
+  }
+  .container .right-col .box {
+    grid-column: span 3;
+    grid-row: span 1;
+  }
+}/*# sourceMappingURL=main.css.map */
